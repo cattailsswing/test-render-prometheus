@@ -13,9 +13,9 @@ scrape_configs:
         refresh_interval: 5s # Refresh the list of targets every 5 seconds
 
   # Uncomment to add a job for scraping another Render service
-   - job_name: 'test-render-prometheus' # Replace w/ your service's name
-     dns_sd_configs:
-       - names: ['test-render-prometheus-discovery'] # Replace w/ your service's name + '-discovery'
-         port: 4000 # Replace w/ the port for your service's metrics endpoint
-         type: A
-         refresh_interval: 5s
+  - job_name: 'test-render-prometheus' # <-- THIS LINE was indented too far
+    dns_sd_configs:
+      - names: ['test-render-prometheus-discovery'] # Replace w/ your service's name + '-discovery'
+        port: 4000 # Replace w/ the port for your service's metrics endpoint
+        type: A
+        refresh_interval: 5s
