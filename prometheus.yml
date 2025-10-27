@@ -12,7 +12,7 @@ scrape_configs:
         type: A # Render service discovery uses A records
         refresh_interval: 5s # Refresh the list of targets every 5 seconds
 
-   Uncomment to add a job for scraping another Render service
+  # Uncomment to add a job for scraping another Render service
    - job_name: 'test-render-prometheus' # Replace w/ your service's name
      dns_sd_configs:
        - names: ['test-render-prometheus-discovery'] # Replace w/ your service's name + '-discovery'
