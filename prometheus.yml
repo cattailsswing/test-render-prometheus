@@ -13,9 +13,9 @@ scrape_configs:
         refresh_interval: 5s # Refresh the list of targets every 5 seconds
 
   # Uncomment to add a job for scraping another Render service
-  - job_name: 'express-backen' # <-- THIS LINE was indented too far
+  - job_name: 'express-backend-gz18' 
     dns_sd_configs:
-      - names: ['express-backen-discovery'] # Replace w/ your service's name + '-discovery'
+      - names: ['express-backend-gz18-discovery'] # Replace w/ your service's name + '-discovery'
         port: 3000 # Replace w/ the port for your service's metrics endpoint
         type: A
         refresh_interval: 5s
